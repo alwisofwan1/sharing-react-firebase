@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 // import { signOut } from 'firebase/auth';
 // import { auth } from 'firebase.config';
 // import toast, { Toaster } from 'react-hot-toast';
-// import { useAuthState } from 'react-firebase-hooks/auth';
-// import { getAuth } from 'firebase/auth';
 
 const Header = () => {
   // const [user] = useAuthState(auth);
@@ -24,38 +22,16 @@ const Header = () => {
   //   }
   // };
 
-  const logout = async () => {
-    // await signOut(auth)
-    //   .then(() => {
-    //     setIsMenu(false);
-    //     localStorage.clear();
-    //     toast.success('Sampai jumpa lagi 😊', {
-    //       style: {
-    //         borderRadius: '10px',
-    //         background: '#333',
-    //         color: '#fff',
-    //         fontSize: '12px',
-    //       },
-    //     });
-    //     dispatch({
-    //       type: actionType.SET_USER,
-    //       user: null,
-    //     });
-    //     navigate('/', {
-    //       replace: true,
-    //     });
-    //   })
-    //   .catch((error) => {
-    //     toast.error(error.message, {
-    //       style: {
-    //         borderRadius: '10px',
-    //         background: '#333',
-    //         color: '#fff',
-    //         fontSize: '12px',
-    //       },
-    //     });
-    //   });
-  };
+  const logout = async () => {};
+
+  // toast.success('Sampai jumpa lagi 😊', {
+  //   style: {
+  //     borderRadius: '10px',
+  //     background: '#333',
+  //     color: '#fff',
+  //     fontSize: '12px',
+  //   },
+  // });
 
   return (
     <header className='fixed z-50 w-screen p-3 px-4 md:p-6 md:py-4 md:px-16 bg-primary shadow-md'>
@@ -69,33 +45,7 @@ const Header = () => {
 
         <div className='flex items-center gap-8'>
           {/* <Toaster /> */}
-          {/* <div className='relative'>
-            {user ? (
-              <motion.img
-                whileTap={{ scale: 0.6 }}
-                src={user?.photoURL ? user?.photoURL : Avatar}
-                className='w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-xl cursor-pointer rounded-full'
-                alt='userprofile'
-                onClick={handleClick}
-              />
-            ) : (
-              <motion.div className='text-base'>
-                <Link
-                  to={'/login'}
-                  className='text-gray-600 hover:text-gray-800'
-                >
-                  Masuk
-                </Link>{' '}
-                /{' '}
-                <Link
-                  to={'/register'}
-                  className='text-gray-600 hover:text-gray-800'
-                >
-                  Daftar
-                </Link>
-              </motion.div>
-            )}
-
+          <div className='relative'>
             {isMenu && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.6 }}
@@ -120,7 +70,7 @@ const Header = () => {
                 </p>
               </motion.div>
             )}
-          </div> */}
+          </div>
         </div>
       </div>
 
